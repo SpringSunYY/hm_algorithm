@@ -5,8 +5,9 @@ public class Bubble {
        对数组a中的元素进行排序
     */
     public static void sort(Comparable[] a){
+
         for(int i=a.length-1;i>0;i--){
-            for(int j=0;j<i;j++){
+            for(int j=0;j<i;j++ ){
                 //{6,5,4,3,2,1}
                 //比较索引j和索引j+1处的值
                 if (greater(a[j],a[j+1])){

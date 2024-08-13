@@ -1,21 +1,26 @@
-package cn.itcast.algorithm.sort;
+package cn.yy.algorithm.sort;
 
-public class Insertion {
+/**
+ * @Project: algorithm
+ * @Package: cn.yy.algorithm.sort
+ * @Author: YY
+ * @CreateTime: 2024-08-13  20:13
+ * @Description: Dubble
+ * @Version: 1.0
+ */
+public class Bubble {
     /*
        对数组a中的元素进行排序
     */
     public static void sort(Comparable[] a) {
-        for (int i = 1; i < a.length; i++) {
-
-            for (int j = i; j > 0; j--) {
-                //比较索引j处的值和索引j-1处的值，如果索引j-1处的值比索引j处的值大，则交换数据，如果不大，那么就找到合适的位置了，退出循环即可；
-                if (greater(a[j - 1], a[j])) {
-                    exch(a, j - 1, j);
-                } else {
-                    break;
+        for (int i = a.length - 1; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+                //{6,5,4,3,2,1}
+                //比较索引j和索引j+1处的值
+                if (greater(a[j], a[j + 1])) {
+                    exch(a, j, j + 1);
                 }
             }
-
         }
     }
 
