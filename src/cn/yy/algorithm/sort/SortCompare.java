@@ -33,6 +33,7 @@ public class SortCompare {
         testInsertion(a);//37499毫秒
         testShell(a);//30毫秒
         testMerge(a);//70毫秒
+        testQuick(a);
 
     }
 
@@ -71,6 +72,18 @@ public class SortCompare {
         long end = System.currentTimeMillis();
         //4.算出程序执行的时间并输出
         System.out.println("归并排序执行的时间为：" + (end - start) + "毫秒");
+    }
+
+    //测试快速排序
+    public static void testQuick(Integer[] a) {
+        //1.获取执行之前的时间
+        long start = System.currentTimeMillis();
+        //2.执行算法代码
+        Quick.sort(a);
+        //3.获取执行之后的时间
+        long end = System.currentTimeMillis();
+        //4.算出程序执行的时间并输出
+        System.out.println("快速排序执行的时间为：" + (end - start) + "毫秒");
     }
 
 }

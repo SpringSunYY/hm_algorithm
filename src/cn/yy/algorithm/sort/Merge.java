@@ -85,7 +85,6 @@ public class Merge {
         for (int index = lo; index <= hi; index++) {
             a[index] = assist[index];
         }
-
     }
 
 }
